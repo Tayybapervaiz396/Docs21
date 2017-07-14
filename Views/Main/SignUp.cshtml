@@ -49,11 +49,12 @@
 
 
 
-                <label style="margin-left:10%; color:white">Gender:</label>  &nbsp;<input type="radio" name="Gender" />
+                <label style="margin-left:10%; color:white">Gender:</label>  &nbsp;
+                <input  type="radio" name="Gender" value="Female" />
                 <label style=" color:white">
                     Female
                 </label>
-                <input type="radio" name="Gender" />&nbsp;<label style=" color:white"> Male</label>
+                <input type="radio" name="Gender" value="Male" />&nbsp;<label style=" color:white"> Male</label>
                 <br><br>
                 <div class="row">
                     <div class="col-sm-6">
@@ -92,9 +93,9 @@
                 alert(LastName);
                 $.ajax({
 
-                    url:"http://localhost:35003/api/SIGNUP",
+                    url: "http://quicks21.apphb.com/api/SignUp",
                     type: "Post",
-                    data: JSON.stringify({ Firstname: Firstname, LastName: LastName, Password: Password, CPassword: CPassword, Email: Email, Address: Address, Gender: Gender, PhoneNo: PhoneNo, City: City, DOBirth: DOBirth }), //{ Name: name, Address: address, DOB: dob },
+                    data: JSON.stringify({Firstname: Firstname, LastName: LastName, Password: Password, CPassword: CPassword, Email: Email, Address: Address, Gender: Gender, PhoneNo: PhoneNo, City: City, DOBirth: DOBirth }), //{ Name: name, Address: address, DOB: dob },
                     contentType: 'application/json; charset=utf-8',
                     success: function (data) {
                         alert('Created Successfully');
